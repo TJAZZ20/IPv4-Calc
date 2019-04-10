@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">IPv4</string>
+    <string name="tab_text_1">Basic</string>
+    <string name="tab_text_2">Subnetting</string>
+    <string name="runBtn">Run</string>
+    <string name="label_IPaddress">_ _ _ _ _ _ _</string>
+    <string name="label_NetAddress">Net Address:</string>
+    <string name="label_IPclass">IP Class:</string>
+    <string name="label_NetType">Net Type:</string>
+    <string name="hint_IPinput">IP Address</string>
+    <string name="label_NoHost">No. Host:</string>
+    <string name="label_SubnetMask">Subnet Mask:</string>
+    <string name="label_Wildcard">WildCard:</string>
+    <string name="label_Binary">Binary:</string>
+    <string name="hint_CIDR">CIDR</string>
+    <string name="hint_bits">Bits</string>
+    <string name="net_bro">Network and Broadcast</string>
+    <string name="label_broadcast">Broadcast</string>
+    <string name="lable_cidr">New Cidr:</string>
+    <string name="ip_details">Description Board</string>
+    <string name="labe"><![CDATA[<-  TAP ->]]></string>
+    <string name="help_note">CIDR stand for Classes Inter-domain routing which is the /32 notation, The app does not
+        support subnet mask format. Example 255.255.128.0( 11111111 , 11111111 , 100000000, 00000000)
+        is equivalent /17 which is  8+8+1+0=17…
+        each octet has subtnet Mask value {128, 64, 32, 16, 8, 4, 2, 1} = 255
+
+    </string>
+    <string name="label_help">CIDR</string>
+    <string name="label_help_bits">Bits</string>
+    <string name="label_help_bitsifo">This is used to subnet the network into different segment, Borrow bits is 2^bits
+        which will give the number of network to be segmented.
+    </string>
+    <string name="label_about_help">About App</string>
+    <string name="about_help">This app is intended to help networker\'s  with full details about an IP and also subnet a
+        given IP into different segment.
+    </string>
+    <string name="developer">Developed by Shaaji Alfred @BUK SIWES</string>
+    <string name="email">Email: shaajialfred@gmail.com</string>
+</resources>

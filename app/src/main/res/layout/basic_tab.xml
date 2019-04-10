@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="wrap_content"
+    >
+
+
+        <EditText
+                android:layout_width="208dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="4dp" android:id="@+id/IPeditText"
+                android:textAlignment="center" android:hint="@string/hint_IPinput" android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/CDIReditText" android:inputType="phone"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent" android:id="@+id/runBtn"
+                android:background="@drawable/bg_splash" android:text="@string/runBtn" android:onClick="startTest"
+                app:layout_constraintBaseline_toBaselineOf="@+id/CDIReditText" android:textAllCaps="false"
+                android:textAlignment="center" android:textColor="@color/colorGrayWhite"/>
+        <TextView
+                android:textIsSelectable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ipAddressTextView" android:textSize="18sp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/CDIReditText" android:text="@string/label_IPaddress"/>
+        <TextView
+                android:text="@string/label_NetAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:id="@+id/textView17" android:textSize="18sp"
+                android:layout_marginTop="44dp" app:layout_constraintTop_toBottomOf="@+id/IPeditText"/>
+        <TextView
+                android:text="@string/label_IPclass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:id="@+id/textView18" android:textSize="18sp" android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView17"/>
+        <TextView
+                android:text="@string/label_NetType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:id="@+id/textView19" android:textSize="18sp" android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView18"/>
+        <TextView
+                android:text="@string/label_NoHost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:id="@+id/textView20" android:textSize="18sp" android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView19"/>
+        <TextView
+                android:text="@string/label_SubnetMask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView21" android:textSize="18sp"
+                android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/textView20"
+                android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+                android:text="@string/label_Wildcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:id="@+id/textView22" android:textSize="18sp" android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView21" android:textAlignment="viewEnd"/>
+        <TextView
+                android:text="@string/label_Binary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:id="@+id/textView23" android:textSize="18sp" android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView22"
+                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.038" android:textAlignment="viewEnd"/>
+        <EditText
+
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/CDIReditText" android:layout_marginTop="4dp"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toStartOf="@+id/runBtn"
+                android:layout_marginEnd="8dp"
+                android:textAlignment="center" android:hint="@string/hint_CIDR"/>
+        <TextView
+                android:textIsSelectable="true"
+                android:text="@string/label_IPaddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/netAddressTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintStart_toEndOf="@+id/textView17"
+                android:layout_marginStart="33dp" app:layout_constraintHorizontal_bias="0.157"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView17" android:textSize="18sp"/>
+        <TextView
+                android:textIsSelectable="true"
+                android:text="@string/label_IPaddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/ipClassTextView"
+                app:layout_constraintStart_toEndOf="@+id/textView18"
+                android:layout_marginStart="67dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintHorizontal_bias="0.285"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView18"
+                android:textSize="18sp"/>
+        <TextView
+                android:textIsSelectable="true"
+                android:text="@string/label_IPaddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/netTypeTextView"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toEndOf="@+id/textView19" android:layout_marginStart="60dp"
+                app:layout_constraintHorizontal_bias="0.266"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView19"
+                android:textSize="18sp"/>
+        <TextView
+                android:textIsSelectable="true"
+                android:text="@string/label_IPaddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/noHostTextView"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/textView20"
+                android:layout_marginStart="58dp" app:layout_constraintHorizontal_bias="0.266"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView20" android:textSize="18sp"/>
+        <TextView
+                android:textIsSelectable="true"
+                android:text="@string/label_IPaddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/subnetMaskTextView"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView21"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toEndOf="@+id/textView21" android:layout_marginStart="25dp"
+                app:layout_constraintHorizontal_bias="0.139" android:textSize="18sp"/>
+        <TextView
+                android:textIsSelectable="true"
+                android:text="@string/label_IPaddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/wildCardTextView"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toEndOf="@+id/textView22" android:layout_marginStart="55dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView22"
+                app:layout_constraintHorizontal_bias="0.262"
+                android:textSize="18sp"/>
+        <TextView
+                android:textIsSelectable="true"
+                android:text="@string/label_IPaddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/binaryTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintStart_toEndOf="@+id/textView23"
+                android:layout_marginStart="77dp" app:layout_constraintHorizontal_bias="0.336"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView23" android:textSize="18sp"/>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

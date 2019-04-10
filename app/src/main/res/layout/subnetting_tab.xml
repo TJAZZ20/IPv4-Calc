@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <ListView
+            android:layout_width="0dp"
+            android:layout_height="0dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/subnetRunBtn" android:id="@+id/itemList"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp" android:id="@+id/ipeditTextSub"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cidrEditTextSub" android:hint="@string/hint_IPinput"
+            android:textAlignment="center" android:inputType="phone"/>
+    <EditText
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:ems="10"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp" android:id="@+id/cidrEditTextSub"
+            app:layout_constraintStart_toEndOf="@+id/ipeditTextSub" app:layout_constraintEnd_toStartOf="@+id/bitEditTextSub"
+            android:hint="@string/hint_CIDR" android:textAlignment="center"/>
+    <EditText
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:ems="10"
+            android:id="@+id/bitEditTextSub"
+            app:layout_constraintBaseline_toBaselineOf="@+id/cidrEditTextSub"
+            app:layout_constraintStart_toEndOf="@+id/cidrEditTextSub" app:layout_constraintEnd_toStartOf="@+id/subnetRunBtn"
+            android:layout_marginEnd="17dp" android:hint="@string/hint_bits" android:textAlignment="center"/>
+    <Button
+            android:text="@string/runBtn"
+            android:layout_width="81dp"
+            android:layout_height="30dp" app:srcCompat="@android:color/holo_blue_bright"
+            android:id="@+id/subnetRunBtn"
+            app:layout_constraintStart_toEndOf="@+id/bitEditTextSub"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:background="@drawable/bg_splash"
+            android:layout_marginTop="20dp" android:onClick="subnetCal" app:layout_constraintTop_toTopOf="parent"
+            android:textAlignment="center" android:textAllCaps="false" android:textColor="@color/colorGrayWhite"/>
+</android.support.constraint.ConstraintLayout>
